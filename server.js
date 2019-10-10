@@ -50,17 +50,10 @@ app.post("/api/friends", function (req, res) {
 
     var newFriends = req.body;  
     
-    if (friends.length < 5) {
-      
-      console.log(newFriends);
-  
       friends.push(newFriends);
   
       res.json(newFriends);
-    } else {
-      friends.push(newFriends);
-    }
-  
+
   });
 
    app.listen(PORT, function () {
